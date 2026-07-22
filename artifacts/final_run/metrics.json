@@ -1,0 +1,48 @@
+{
+  "experiment": "chronological prematch outcome prediction",
+  "random_state": 42,
+  "rows": 3961,
+  "train_rows": 3168,
+  "test_rows": 793,
+  "train_date_min": "1958-06-24",
+  "train_date_max": "2023-10-06",
+  "test_date_min": "2023-10-07",
+  "test_date_max": "2025-07-27",
+  "selected_model": "logistic_regression",
+  "selected_parameters": {
+    "C": 0.01,
+    "class_weight": null
+  },
+  "temperature": 1.1,
+  "environment": {
+    "python": "3.13.12",
+    "platform": "macOS-15.7.3-arm64-arm-64bit-Mach-O",
+    "numpy": "2.5.1",
+    "pandas": "3.0.5",
+    "scikit_learn": "1.9.0"
+  },
+  "baseline": {
+    "accuracy": 0.4224464060529634,
+    "balanced_accuracy": 0.3333333333333333,
+    "macro_f1": 0.1979905437352246,
+    "log_loss": 1.0643874129460467,
+    "brier": 0.6456974826896509,
+    "expected_calibration_error": 0.03209904849249107
+  },
+  "uncalibrated_model": {
+    "accuracy": 0.5889029003783102,
+    "balanced_accuracy": 0.4906120084508962,
+    "macro_f1": 0.43401423548580736,
+    "log_loss": 0.9158894956794401,
+    "brier": 0.5388704088472144,
+    "expected_calibration_error": 0.04793658075331446
+  },
+  "final_model": {
+    "accuracy": 0.5889029003783102,
+    "balanced_accuracy": 0.4906120084508962,
+    "macro_f1": 0.43401423548580736,
+    "log_loss": 0.9213341355263723,
+    "brier": 0.5423348274343648,
+    "expected_calibration_error": 0.06517741017134124
+  }
+}
