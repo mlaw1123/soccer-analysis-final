@@ -1,0 +1,31 @@
+{
+  "dataset": "StatsBomb Open Data match metadata",
+  "upstream_source": "https://github.com/statsbomb/open-data",
+  "upstream_snapshot": "Snapshot inherited from Soccer-Probability-Engine commit 14a61a6",
+  "source_sha256": "89690e1c2fbbcf55762e4abe32bcd0209283565f5800600efcbcfc5dfee5c40e",
+  "normalized_path": "data/input/matches.parquet",
+  "normalized_sha256": "1d3243f77e75359243869a4ce78016d32de3a877dc2662a13d6f6222233c7732",
+  "rows": 3961,
+  "date_min": "1958-06-24",
+  "date_max": "2025-07-27",
+  "competitions": 24,
+  "class_counts": {
+    "home_win": 1775,
+    "draw": 879,
+    "away_win": 1307
+  },
+  "columns": [
+    "match_id",
+    "match_date",
+    "competition_id",
+    "competition",
+    "season_id",
+    "season",
+    "home_team_id",
+    "home_team",
+    "away_team_id",
+    "away_team",
+    "home_score",
+    "away_score"
+  ]
+}
