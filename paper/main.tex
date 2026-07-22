@@ -320,6 +320,37 @@ The recorded run used Python 3.13.12, NumPy 2.5.1, pandas 3.0.5, and scikit-lear
 Artifact hashes allow later readers to distinguish regenerated results from this
 submitted run.
 
+\section{Presentation Video Demonstration}
+
+To make the model workflow visible in the final presentation, we built a separate
+video demonstration over a 130.33-second, 1920$\times$1080 FIFA highlight clip of
+Argentina versus Switzerland. Ultralytics YOLOv8m, pretrained on COCO, detects
+persons and sports balls on every second source frame at a 960-pixel inference
+size. A transparent HSV jersey-color heuristic labels likely Argentina and
+Switzerland players and leaves uncertain detections as generic persons. The ball
+was detected on 1,163 of 1,953 sampled frames (59.55\%); 25,090 person and 1,865
+ball detections were retained.
+
+The overlay incorporates the submitted prematch model rather than presenting a
+disconnected computer-vision demo. Because the versioned training snapshot ends
+in 2025, the 2026 fixture has no valid competition-season history. The model is
+therefore evaluated at documented neutral new-season state, producing 46.59\%
+Argentina, 20.28\% draw, and 33.14\% Switzerland. These fixed values appear under
+the larger display. The changing ``current'' visualization adds bounded,
+four-second-smoothed evidence from team-colored player confidence and nearest-player
+ball proximity in log-probability space. It is explicitly labeled as a research
+visualization rather than calibrated betting odds.
+
+Inference ran locally on an Apple M1 Pro with 16 GB unified memory using the
+PyTorch MPS backend. The full pass took 146.37 seconds (13.34 sampled frames/s).
+A lossless H.264 4:4:4 annotated master was rendered before two-pass delivery
+compression. The final 1080p H.264/AAC artifacts are 178.76 MiB for the 200 MB
+cap and 44.19 MiB for the 50 MB cap. Both were decoded end to end and visually
+checked across wide play, set pieces, close-ups, and the end card. The source clip
+declares no downloadable license in YouTube metadata; it is excluded from Git,
+attributed on screen, and the derived presentation is documented for local course
+use subject to permission and fair-use requirements.
+
 \section{Conclusion}
 
 A carefully regularized linear model provides a strong, auditable baseline for

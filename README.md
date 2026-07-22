@@ -69,7 +69,7 @@ paper rather than hidden behind headline accuracy.
 
 ## Deliverables
 
-- `paper/main.pdf`: verified six-page final paper;
+- `paper/main.pdf`: verified seven-page final paper;
 - `paper/main.tex` and `paper/references.bib`: arXiv-ready source;
 - `artifacts/final_run/`: metrics, predictions, sweeps, cards, figures, fitted
   model, and SHA-256 manifest;
@@ -78,6 +78,8 @@ paper rather than hidden behind headline accuracy.
 - `src/soccer_final/`: normalization, feature, tuning, evaluation, calibration,
   plotting, reporting, and manifest code;
 - `tests/`: leakage and evaluation tests.
+- `presentation/output/`: verified 1080p final-presentation MP4s capped at
+  200 MB and 50 MB, tracked with Git LFS.
 
 ## Reproduce
 
@@ -85,7 +87,7 @@ Python 3.11 or later is required.
 
 ```bash
 python3 -m venv .venv
-.venv/bin/python -m pip install -e '.[dev]'
+.venv/bin/python -m pip install -e '.[dev,video]'
 
 # Rebuild features and all experiment artifacts.
 make experiment
@@ -105,6 +107,44 @@ make paper
 experiment intentionally rewrites `artifacts/final_run/artifact_manifest.json`
 to describe the new files.
 
+## Presentation finale
+
+The final presentation renders YOLOv8m player and sports-ball detections over a
+130-second, 1080p FIFA highlight clip and displays two probability layers:
+
+- the committed prematch engine at neutral 2026 state: 46.6% Argentina, 20.3%
+  draw, and 33.1% Switzerland;
+- changing detection-context visualization odds derived from jersey-color,
+  player-count, ball-proximity, and four-second smoothing signals.
+
+The changing probabilities are presentation context, not independently validated
+live-match odds. The overlay says this on screen. It also labels ambiguous people
+as `PERSON`, attributes FIFA/YouTube, and explains that team colors are heuristic.
+
+Final deliverables:
+
+- `presentation/output/argentina_switzerland_prediction_200mb.mp4` — 178.76 MiB
+- `presentation/output/argentina_switzerland_prediction_50mb.mp4` — 44.19 MiB
+
+Both are 1920x1080 H.264/AAC MP4s and decode end to end without error. Detailed
+inference, compression, hardware, hashes, and rights notes are in
+`presentation/RESULTS.md`, `presentation/HARDWARE.md`, and
+`presentation/source/source_metadata.json`.
+
+To reproduce locally, first review the source's permission/fair-use requirements,
+then run:
+
+```bash
+make presentation-download
+make presentation-detect
+make presentation-master
+make presentation-encodes
+```
+
+The downloaded source, 50 MB YOLO weights, 4.8 MB detection cache, and 2.15 GiB
+lossless annotated master stay local and gitignored. Only the two final delivery
+MP4s are stored in Git LFS.
+
 ## Repository layout
 
 ```text
@@ -113,6 +153,7 @@ soccer-analysis-final/
 ├── data/input/                # normalized versioned source
 ├── data/derived/              # generated prematch features
 ├── paper/                     # LaTeX, bibliography, rendered PDF
+├── presentation/              # video pipeline docs and deliverables
 ├── scripts/                   # artifact verification
 ├── src/soccer_final/          # analysis package
 └── tests/                     # leakage and metric checks
