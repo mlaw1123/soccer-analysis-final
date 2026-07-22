@@ -1,0 +1,36 @@
+{
+  "source": "presentation/work/full/annotated_lossless_master.mp4",
+  "output": "presentation/output/argentina_switzerland_prediction_200mb.mp4",
+  "target_megabytes": 200.0,
+  "actual_bytes": 187446375,
+  "actual_megabytes": 178.7627935409546,
+  "video_kbps": 12294,
+  "audio_kbps": 128,
+  "sha256": "6a9d6e106d085899b2ef8597c53ba4aebaaa376dc26d04b77e496566891bf198",
+  "probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "pix_fmt": "yuv420p",
+        "r_frame_rate": "979001/32666"
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "r_frame_rate": "0/0"
+      }
+    ],
+    "format": {
+      "duration": "130.330200",
+      "size": "187446375",
+      "bit_rate": "11505936"
+    }
+  }
+}

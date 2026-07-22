@@ -1,0 +1,50 @@
+{
+  "run_date": "2026-07-22",
+  "source": {
+    "local_path": "presentation/source/argentina_vs_switzerland_2026.mp4",
+    "sha256": "03e8cc1775fc8ff3429f9d5a81574723d7c0f08b19689fe0144a0b72ec3049ce",
+    "tracked_in_git": false
+  },
+  "detector": {
+    "model": "yolov8m.pt",
+    "sha256": "5d4a90cdc7a21786cc59cd19778e9eafff836df9e2da32524737c7ee6efe4fe5",
+    "device": "mps",
+    "image_size": 960,
+    "stride": 2,
+    "sampled_frames": 1953,
+    "elapsed_seconds": 146.3658,
+    "person_detections": 25090,
+    "ball_detections": 1865,
+    "ball_frames": 1163
+  },
+  "master": {
+    "local_path": "presentation/work/full/annotated_lossless_master.mp4",
+    "sha256": "e2a5eeb7f6a6597ac35f7ec23ddb2fd6bc7d63f324f29c826f5d96d230d80325",
+    "bytes": 2310134127,
+    "tracked_in_git": false
+  },
+  "deliverables": [
+    {
+      "path": "presentation/output/argentina_switzerland_prediction_200mb.mp4",
+      "sha256": "6a9d6e106d085899b2ef8597c53ba4aebaaa376dc26d04b77e496566891bf198",
+      "bytes": 187446375,
+      "target_megabytes": 200,
+      "git_lfs": true
+    },
+    {
+      "path": "presentation/output/argentina_switzerland_prediction_50mb.mp4",
+      "sha256": "3f47a37cab5883051796ec09f9d7afc7febcabb595e9e77d5404f74e83e7a8e6",
+      "bytes": 46338081,
+      "target_megabytes": 50,
+      "git_lfs": true
+    }
+  ],
+  "qa": {
+    "decoded_end_to_end": true,
+    "audio_present": true,
+    "video_present": true,
+    "resolution": "1920x1080",
+    "visual_samples_checked": 6,
+    "compression_comparison_checked": true
+  }
+}
