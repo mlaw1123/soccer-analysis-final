@@ -2,6 +2,7 @@
   "model": "yolov8m.pt",
   "family": "Ultralytics YOLOv8 medium COCO detector",
   "upstream": "https://github.com/ultralytics/assets/releases/",
+  "sha256": "5d4a90cdc7a21786cc59cd19778e9eafff836df9e2da32524737c7ee6efe4fe5",
   "token_required": false,
   "classes_used": {
     "0": "person",

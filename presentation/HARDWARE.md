@@ -24,3 +24,11 @@ Recorded on 22 July 2026:
 
 The source clip is about 3,900 frames. YOLO inference is the dominant workload;
 compression is substantially cheaper and can be rerun from the annotated master.
+
+## Benchmark
+
+YOLOv8m at a 960-pixel inference size on the MPS device processed 60 sampled
+1080p frames in 11.31 seconds, or 5.30 inference frames per second. With an
+inference stride of two, the projected full detection pass is approximately six
+minutes. The four-second lossless-overlay benchmark rendered at roughly 42 source
+frames per second; its size projected to about 2.9 GB for the full master.
