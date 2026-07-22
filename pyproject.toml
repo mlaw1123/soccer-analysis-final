@@ -18,6 +18,14 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pymupdf>=1.24", "pytest>=8", "ruff>=0.5"]
+video = [
+  "certifi>=2026.7.22",
+  "opencv-python-headless>=4.10",
+  "torch>=2.7",
+  "torchvision>=0.22",
+  "ultralytics>=8.3",
+  "yt-dlp>=2026.7.1",
+]
 
 [project.scripts]
 soccer-final = "soccer_final.experiment:main"

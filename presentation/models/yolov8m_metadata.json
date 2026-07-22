@@ -1,0 +1,11 @@
+{
+  "model": "yolov8m.pt",
+  "family": "Ultralytics YOLOv8 medium COCO detector",
+  "upstream": "https://github.com/ultralytics/assets/releases/",
+  "token_required": false,
+  "classes_used": {
+    "0": "person",
+    "32": "sports ball"
+  },
+  "note": "COCO person detections are presentation proxies for players; crowd, officials, and coaches can produce false positives."
+}

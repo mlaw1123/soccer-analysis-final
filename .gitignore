@@ -16,3 +16,10 @@ paper/*.fls
 paper/*.log
 paper/*.out
 paper/*.synctex.gz
+
+# Presentation-video working material. The source clip and model weights are
+# intentionally local-only; final encoded deliverables are tracked with Git LFS.
+presentation/source/*.mp4
+presentation/work/
+presentation/models/*.pt
+presentation/models/*.onnx
