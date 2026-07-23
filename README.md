@@ -2,6 +2,8 @@
 
 ## [Launch the live final presentation →](https://match-intelligence-2026.mattlaw1123.chatgpt.site)
 
+### [Download the final project from GitHub →](https://github.com/mlaw1123/soccer-analysis-final/releases/tag/v1.0.0)
+
 **An end-to-end soccer outcome prediction system—from 67 years of match data to an on-screen World Cup match finale.**
 
 [![Match Intelligence 2026 — before the whistle, know the odds](site/public/og.png)](https://match-intelligence-2026.mattlaw1123.chatgpt.site)
@@ -68,6 +70,7 @@ The changing detection-context values are a presentation visualization—not ind
 ## Final deliverables
 
 - **Live experience:** [match-intelligence-2026.mattlaw1123.chatgpt.site](https://match-intelligence-2026.mattlaw1123.chatgpt.site)
+- **GitHub final release:** [Match Intelligence 2026 — Final Project (`v1.0.0`)](https://github.com/mlaw1123/soccer-analysis-final/releases/tag/v1.0.0)
 - **Paper:** [`paper/main.pdf`](paper/main.pdf), with arXiv-ready LaTeX and bibliography
 - **Model run:** [`artifacts/final_run/`](artifacts/final_run/) with metrics, predictions, sweeps, figures, cards, fitted model, and SHA-256 manifest
 - **Data:** normalized source lineage in [`data/input/`](data/input/) and leakage-safe features in [`data/derived/`](data/derived/)
